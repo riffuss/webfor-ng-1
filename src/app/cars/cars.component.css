@@ -1,0 +1,10 @@
+ul{
+  list-style: none;
+}
+li{
+  margin-bottom: 10px;
+}
+.big-text{
+  font-size: 120%;
+  border: 1px solid black;
+}

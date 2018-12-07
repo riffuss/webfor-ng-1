@@ -1,8 +1,16 @@
+<input type="text" class="form-control" [(ngModel)]="carName">
 <button  class="btn btn-info" (click)="addCar()">Add a car</button>
-<p>{{addCarStatus}}</p>
+<p *ngIf="!addCarStatus; else succesStatus">Машина не добавлена</p>
+<ng-template #succesStatus>
+  <p>Машина добавлена</p>
+</ng-template>
 <hr>
-<app-car></app-car>
-<app-car></app-car>
+<!-- <app-car *ngFor="let car of cars"></app-car> -->
 <hr>
-<input type="text" class="form-control" ()>
-<p>{{inputText}}</p>
+<ul class="col-xl-4">
+  <li *ngFor="let date of dates; let idx = index">
+    <div>
+      <b>{{idx + 1}}</b> - {{date | date}}
+    </div>
+  </li>
+</ul>
